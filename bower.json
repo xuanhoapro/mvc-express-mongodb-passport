@@ -1,0 +1,32 @@
+{
+  "name": "mvc-express-mongodb-passport",
+  "description": "build web application with nodejs, expressjs, mongodb, passportjs",
+  "main": "app.js",
+  "authors": [
+    "HoaNguyen <xuanhoapro@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "nodjs",
+    "expressjs",
+    "mongodb",
+    "passportjs",
+    "mvc"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "http://localhost:3000",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "startbootstrap-sb-admin-2": "~1.0.8"
+  }
+}

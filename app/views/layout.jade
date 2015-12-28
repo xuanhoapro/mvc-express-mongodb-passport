@@ -1,0 +1,101 @@
+//
+   Created by HoaNguyen on 12/28/15.
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport",content="width=device-width, initial-scale=1")
+        meta(name="description",content="")
+        meta(name="author",content="")
+        link(rel="icon",href="/favicon.ico")
+        title= title
+        // Bootstrap Core CSS
+        link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.min.css')
+        // MetisMenu CSS
+        link(rel='stylesheet', href='/components/metisMenu/dist/metisMenu.min.css')
+        // Timeline CSS
+        link(rel='stylesheet', href='/components/startbootstrap-sb-admin-2/dist/css/timeline.css')
+        // Custom CSS
+        link(rel='stylesheet', href='/components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css')
+        // Morris Charts CSS
+        link(rel='stylesheet', href='/components/morrisjs/morris.css')
+        // Custom Fonts
+        link(rel='stylesheet', type='text/css', href='/components/font-awesome/css/font-awesome.min.css')
+        link(rel='stylesheet', href='/css/style.css')
+        block extraHeader
+        // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+        // WARNING: Respond.js doesn't work if you view the page via file://
+        //if lt IE 9
+          script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+          script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    body
+        #wrapper
+            nav.navbar.navbar-default.navbar-static-top(role='navigation', style='margin-bottom: 0')
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='/') SB Admin v2.0
+                // /.navbar-header
+                ul.nav.navbar-top-links.navbar-right
+                    li.dropdown
+                        a.dropdown-toggle(data-toggle='dropdown', href='#')
+                            i.fa.fa-user.fa-fw
+                            i.fa.fa-caret-down
+                        ul.dropdown-menu.dropdown-user
+                            li
+                                a(href='#')
+                                    i.fa.fa-user.fa-fw
+                                    |  User Profile
+                            li
+                                a(href='#')
+                                    i.fa.fa-gear.fa-fw
+                                    |  Settings
+                            li.divider
+                            li
+                                a(href='/logout')
+                                    i.fa.fa-sign-out.fa-fw
+                                    |  Logout
+                        // /.dropdown-user
+                    // /.dropdown
+                // /.navbar-top-links
+                .navbar-default.sidebar(role='navigation')
+                    .sidebar-nav.navbar-collapse
+                        ul#side-menu.nav
+                            li.sidebar-search
+                                .input-group.custom-search-form
+                                    input.form-control(type='text', placeholder='Search...')
+                                    span.input-group-btn
+                                        button.btn.btn-default(type='button')
+                                            i.fa.fa-search
+                                    // /input-group
+                            li
+                                a(href='/')
+                                    i.fa.fa-dashboard.fa-fw
+                                    |  Dashboard
+                            li
+                                a(href='/users')
+                                    i.fa.fa-user.fa-fw
+                                    |  Users
+                            // /.sidebar-collapse
+                        // /.navbar-static-side
+            #page-wrapper
+                .row
+                    .col-lg-12
+                        h1.page-header= title
+                block content
+        // jQuery
+        script(type='text/javascript', src='/components/jquery/dist/jquery.min.js')
+        // Bootstrap Core JavaScript
+        script(type='text/javascript', src='/components/bootstrap/dist/js/bootstrap.min.js')
+        // Metis Menu Plugin JavaScript
+        script(type='text/javascript', src='/components/metisMenu/dist/metisMenu.min.js')
+        // Morris Charts JavaScript
+        script(type='text/javascript', src='/components/raphael/raphael-min.js')
+        script(type='text/javascript', src='/components/morrisjs/morris.min.js')
+        // Custom Theme JavaScript
+        script(type='text/javascript', src='/components/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js')
+        block script
