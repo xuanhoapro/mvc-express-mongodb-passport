@@ -36,13 +36,13 @@ passport.use(new LocalStrategy({
         passwordField: 'password'
     },
     function (username, password, done) {
-        console.error(username);
         usersModel.findOne({email: username, del_flg: 0}, function(err, user){
-            console.error(user);
-            if(err) {
+            if (err) { return done(err); }
+
+            if (!user) {
                 return done(null, false, {message: 'Incorrect email.'});
 
-            }else if(password != user.password){
+            }else if(user && password != user.password){
                 return done(null, false, {message: 'Incorrect password.'});
 
             }else{
